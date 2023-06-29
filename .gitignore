@@ -1,0 +1,16 @@
+#   Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+#   Ignore packaging files
+dist/
+
+#   Ignore system directories
+.vscode/
+.DS_Store
+
+#   Ignore unused top-level files
+/*.py
+
+#   Ignore documentation website
+docs/build/

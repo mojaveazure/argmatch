@@ -1,0 +1,37 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "argmatch"
+authors = [{name = "Paul Hoffman", email = "hoff0792@umn.edu"}]
+license = {file = "LICENSE"}
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed"
+]
+dynamic = ["version", "description"]
+requires-python = ">=3.10"
+
+# [project.urls]
+# Documentation = 'https://mojaveazure.github.io/argmatch'
+# Source = 'https://github.com/mojaveazure/argmatch'
+# Tracker = 'https://github.com/mojaveazure/argmatch/issues'
+
+[project.optional-dependencies]
+# test = [
+#     "pytest"
+# ]
+doc = [
+    "sphinx >= 6.2.1"
+    # "sphinx-bootstrap-theme",
+    # "sphinx-rtd-theme",
+    # "sphinxcontrib-napoleon"
+]
+
+[tool.flit.sdist]
+include = ["doc/"]
+exclude = ["docs/build"]
